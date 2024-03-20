@@ -1,0 +1,32 @@
+.jet {
+    color: #2D2E2E;
+}
+
+.buttonsize {
+    height: 40px;
+    width: 55px;
+    color:#BCABAE;
+    background-color: #2D2E2E;
+    border-color: #0F0F0F;
+    border-radius: 8px;
+    margin: 5px;
+    width: auto;
+}
+
+.center {
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+
+.bottom {
+    margin-bottom: 5px;
+}
+.basictext {
+    color: #2D2E2E;
+}
+
+.buttonsize:hover {
+    background-color: #0F0F0F ;
+    color: #BCABAE;
+}
