@@ -1,7 +1,7 @@
 <body  class = "center" style= "background-color:#BCABAE">
     <h2 style = "color:#2D2E2E">{{hero.name | uppercase}} Details</h2>
     <div class = "bottom"><span class = "basictext ">id: {{hero.id}}</span></div>
-    <div class = "bottom"><span class = "basictext ">name: {{hero.name}}</span></div>
+    <div class = "bottom"><span class = "basictext ">name: {{hero.name | uppercase}}</span></div>
     <div class = "bottom"><span class = "basictext " >{{hero.summary}}</span></div>
     <div class = "bottom">
         <button type = "button" class = buttonsize  [disabled] = "on">Linkedin</button>
@@ -9,18 +9,16 @@
         <button type = "button" class = "buttonsize" [disabled] = "on">Notable Projects</button>
     </div>
     <div>
-        <img [src] = image alt = "Shrek">
+        <img [src] = picture alt = "Me">
     </div>
 
     <div>
-
-    <input type = "text" [(ngModel)] = "title">
-    <h2>{{title}}</h2>
-    <button type = "button" class = "buttonsize" (click) = "test">
-        Click me!
-    </button>
+        <label for = "name">Hero name:</label>
+        <input  id = "name" [(ngModel)] = "hero.name" placeholder = "name">
     </div>
-    
+    <div>
+        {{hero.name}}
+    </div>    
 
 
 </body>

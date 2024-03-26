@@ -11,6 +11,7 @@
     border-radius: 8px;
     margin: 5px;
     width: auto;
+
 }
 
 .center {
@@ -29,4 +30,12 @@
 .buttonsize:hover {
     background-color: #0F0F0F ;
     color: #BCABAE;
+    transition: background-color 0.2s ease-in 0.05s;
+
+
+/* transition-property: background-color;
+transition-duration: 0.2s;
+transition-timing-function: ease-in;
+transition-delay: 0.1s; */
+
 }
