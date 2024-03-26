@@ -16,6 +16,6 @@ export class AppComponent {
     alert("Hello");
     console.log("hello") 
 
-  } 
-
+  }
+  text : string = "this is just sample text"
 }
