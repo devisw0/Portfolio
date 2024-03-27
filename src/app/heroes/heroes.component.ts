@@ -46,6 +46,21 @@ heroes = HEROES;
 //in a seperate file and imported it which is now known as HEROES
 
 
+selectedHero?:Hero
+//Im guessing its saying that this is of type Hero or something to do with it?
+//So we know it includes the id, name and summary
+
+onSelect(hero:Hero): void {
+  //onSelect is the function that executes with the event binding on the respective
+  //template file and takes in an input called hero of type Hero
+
+  this.selectedHero = hero;
+  //Im not really sure by only guess is that its saying this instance of
+  //type selectedHero is the same as the input of the function (hero) which is of
+  //type hero
+
+}
+
 
 
 }

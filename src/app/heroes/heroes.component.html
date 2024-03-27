@@ -21,7 +21,8 @@
         {{hero.name}}
     </div>    
     <h2>My Heroes</h2>
-    <ul class = "lol"> <!--used to be class = "heroes", but I wanted to see what if it really mattered-->
+    <ul class = "lol"> 
+    <!--used to be class = "heroes", but I wanted to see what if it really mattered-->
     <!-- heroes indicates out heroes list from the HeroesComponent class -->
     <li *ngFor="let hero of heroes">
 
@@ -30,15 +31,29 @@
         <!--works like a for loop, im guessing hero is an iterator -->
         <!--we imported the array and called it HEROES and made heroes = HEROES
         where the import was called HEROES and we set heroes equal to that-->
-            <button type = "button">
+            <button type = "button" (click) = "onSelect(hero)">
+                <!--We now have a button and use an event binding when user clicks
+                it executes the onSelect function which takes the iterator as an input-->
                 <span class = "badge margin-right">{{hero.id}}.</span>
+                <!--And then here we have a badge class applied-->
                 <span class = "name">{{hero.name}}</span>
-                <br>
+                <br> <!--Just a break-->
                 <span>{{hero.summary}}</span>
             </button>
-            
+
         </li>
     </ul>
+    <div *ngIf="selectedHero">
+        <!--like angular's if statement
+        We're saying if selectedHero-->
+        <h2>{{selectedHero.name | uppercase}} Details</h2>
+        <!--interpolating the selectedHero's name-->
+        <div>id: {{selectedHero.id}}</div>
+        <div>
+          <label for="hero-name">Hero name: </label>
+          <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+        </div>
+      </div>
 </span>
 <!-- </body> -->
 <!--Had to get rid of the body tag, only should use it in index.html-->
