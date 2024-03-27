@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Who is Devan?';
+  title = 'Who are the Heroes?';
   test():void { 
     alert("Hello");
     console.log("hello") 

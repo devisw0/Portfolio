@@ -1,4 +1,5 @@
-<body  class = "center" style= "background-color:#BCABAE">
+<!-- <body  class = "center" style= "background-color:#BCABAE"> -->
+    <span class = "center" style = "background-color:#BCABAE">
     <h2 style = "color:#2D2E2E">{{hero.name | uppercase}} Details</h2>
     <div class = "bottom"><span class = "basictext ">id: {{hero.id}}</span></div>
     <div class = "bottom"><span class = "basictext ">name: {{hero.name | uppercase}}</span></div>
@@ -19,9 +20,29 @@
     <div>
         {{hero.name}}
     </div>    
+    <h2>My Heroes</h2>
+    <ul class = "lol"> <!--used to be class = "heroes", but I wanted to see what if it really mattered-->
+    <!-- heroes indicates out heroes list from the HeroesComponent class -->
+    <li *ngFor="let hero of heroes">
 
-
-</body>
+        <!--This is Angular's repeater directive, repeats the host element 
+        for each element in list-->
+        <!--works like a for loop, im guessing hero is an iterator -->
+        <!--we imported the array and called it HEROES and made heroes = HEROES
+        where the import was called HEROES and we set heroes equal to that-->
+            <button type = "button">
+                <span class = "badge margin-right">{{hero.id}}.</span>
+                <span class = "name">{{hero.name}}</span>
+                <br>
+                <span>{{hero.summary}}</span>
+            </button>
+            
+        </li>
+    </ul>
+</span>
+<!-- </body> -->
+<!--Had to get rid of the body tag, only should use it in index.html-->
+<!--Caused hydration error which is why event binding and two way binding did not work-->
 
 
 

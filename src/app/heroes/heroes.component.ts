@@ -3,11 +3,14 @@ import { Hero } from '../hero';
 import { CommonModule } from '@angular/common';
 import { GlobalConstants } from '../global-constants';
 import { FormsModule } from '@angular/forms';
+import {HEROES} from '../mock-heroes';
+import { NgFor } from '@angular/common';
+import { NgIf } from '@angular/common'; 
 
 @Component({
   selector: 'app-heroes',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, NgFor, NgIf], //I guess if its not an Module it doesnt go here
   templateUrl: './heroes.component.html',
   styleUrl: './heroes.component.css'
 })
@@ -37,5 +40,12 @@ export class HeroesComponent {
 
 picture = GlobalConstants.image; 
 //from my imports in global-variables.ts
+
+heroes = HEROES;
+//setting the heroes variable equal to the the array  of heroes we created
+//in a seperate file and imported it which is now known as HEROES
+
+
+
 
 }
